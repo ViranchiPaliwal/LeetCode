@@ -1,0 +1,6 @@
+/.idea/
+*.bak
+*.iml
+../out/
+out/
+*.class
