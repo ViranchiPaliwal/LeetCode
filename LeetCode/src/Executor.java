@@ -110,7 +110,15 @@ public class Executor {
         int [] ar2 = {1,3,4,2};
         obj.nextGreaterElement(ar1,ar2);
 
+        //medium
+        String[] s = {"0","3","/"};
+        obj.evalRPN(s);
+        obj.decodeString("3[a]2[bc]");
+
+
     }
+
+
 
 
 

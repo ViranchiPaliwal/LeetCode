@@ -251,6 +251,89 @@ public class mStack {
         }
         return findNums;
     }
+
+
+    // Medium Stack
+
+    // Evaluate Reverse Polish Notation
+    public int evalRPN(String[] tokens) {
+        if(tokens==null||tokens.length==0) return 0;
+        Stack<Integer> stack = new Stack<>();
+        int a, b;
+        for (int i = 0; i <tokens.length; i++) {
+            String s = tokens[i];
+            if(s.equals("+")||s.equals("-")||s.equals("*")||s.equals("/"))
+            {
+                b = stack.pop();
+                a = stack.pop();
+                if(s.equals("+"))
+                    stack.push(a+b);
+                else if (s.equals("-"))
+                    stack.push(a-b);
+                else if (s.equals("*"))
+                    stack.push(a*b);
+                else
+                    stack.push(a/b);
+            }
+            else
+                stack.push(Integer.parseInt(s));
+        }
+        return stack.pop();
+    }
+
+    public String decodeString(String s) {
+        String[] sar = s.split("]|\\[");
+        for (int i = 0; i < sar.length; i++) {
+
+        }
+        return "";
+    }
+
+// Flatten Nested List Iterator
+    public interface NestedInteger {
+
+        // @return true if this NestedInteger holds a single integer, rather than a nested list.
+        public boolean isInteger();
+
+        // @return the single integer that this NestedInteger holds, if it holds a single integer
+        // Return null if this NestedInteger holds a nested list
+        public Integer getInteger();
+
+        // @return the nested list that this NestedInteger holds, if it holds a nested list
+        // Return null if this NestedInteger holds a single integer
+        public List<NestedInteger> getList();
+    }
+
+    public class NestedIterator implements Iterator<Integer> {
+
+        public NestedIterator(List<NestedInteger> nestedList) {
+            rec(nestedList);
+            Stack<Integer> temp = new Stack<>();
+            while(!stack.isEmpty())
+                temp.push(stack.pop());
+            stack=temp;
+        }
+
+        Stack<Integer> stack = new Stack<>();
+        public void rec(List<NestedInteger> nestedList) {
+            for (int i = 0; i < nestedList.size(); i++) {
+                if (nestedList.get(i).isInteger())
+                    stack.push(nestedList.get(i).getInteger());
+                else
+                    rec(nestedList.get(i).getList());
+            }
+        }
+        @Override
+        public Integer next() {
+            return stack.pop();
+        }
+
+        @Override
+        public boolean hasNext() {
+            return !stack.isEmpty();
+        }
+    }
+
 }
 
 
