@@ -38,7 +38,8 @@ public class Executor {
 //        obj.getIntersectionNode(a,f);
 //
 
-//        DynamicProgramming d = new DynamicProgramming();
+        DynamicProgramming d = new DynamicProgramming();
+        System.out.println(d.numSquares(5));
 //        String[] str = new String[]{"10", "0", "1"};
 //        d.findMaxForm(str,1,1);
 //
@@ -89,33 +90,44 @@ public class Executor {
 //        o.reverseBetween(a,3,6);
 //
 //
-//        Arrays arrobjj = new Arrays();
-//        //   ArrayList<ArrayList<Integer>> a = new ArrayList<ArrayList<Integer>>(new ArrayList<Integer>(Arrays));
+//        mArray arrobjj = new mArray();
+//        //   ArrayList<ArrayList<Integer>> a = new ArrayList<ArrayList<Integer>>(new ArrayList<Integer>(mArray));
 //        //    objj.minimumTotal([[-1],[2,3],[1,-1,-3]])
 //
 
 
 //----------------- STACK----------------------------//
-        mStack obj = new mStack();
-        obj.push(1);
-        obj.push(2);
-        obj.push(3);
-        int param_2 = obj.pop();
-        int param_3 = obj.top();
-        boolean param_4 = obj.empty();
-
-        boolean ba =obj.isValid("[{()}]");
-
-        int[] ar1 = {4,1,2};
-        int [] ar2 = {1,3,4,2};
-        obj.nextGreaterElement(ar1,ar2);
-
-        //medium
-        String[] s = {"0","3","/"};
-        obj.evalRPN(s);
-        obj.decodeString("3[a]2[bc]");
-
-
+//        mStack obj = new mStack();
+//        obj.letterCombinations("2");
+//        obj.countSubstrings("fdsklf");
+//        obj.lengthOfLongestSubstring("jbpnbwwd");
+//        String[] input = {"eat", "tea", "tan", "ate", "nat", "bat"};
+//        obj.groupAnagrams(input);
+//        obj.push(1);
+//        obj.push(2);
+//        obj.push(3);
+//        int param_2 = obj.pop();
+//        int param_3 = obj.top();
+//        boolean param_4 = obj.empty();
+//
+//        boolean ba =obj.isValid("[{()}]");
+//
+//        int[] ar1 = {4,1,2};
+//        int [] ar2 = {3,1};
+//        //obj.nextGreaterElement(ar1,ar2);
+//
+//        //medium
+//        String[] s = {"0","3","/"};
+//        obj.evalRPN(s);
+//        obj.decodeString("3[a]2[bc]");
+//
+//        obj.deserialize("[123,[456,[789]]]");
+//
+//        obj.a("aabb");
+//
+//        mArray arr = new mArray();
+//        arr.subsetsWithDup(ar1);
+//        arr.search(ar2,1);
     }
 
 

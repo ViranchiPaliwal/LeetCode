@@ -236,4 +236,53 @@ public class Code {
             return Math.min(minDepth(root.left),minDepth(root.right))+1;
     }
 
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        ListNode cA = headA;
+        int countA = 0;
+        int diff = 0;
+        while(cA!=null)
+        {
+            countA++;
+            cA=cA.next;
+        }
+
+        ListNode cB = headB;
+        int countB = 0;
+        while(cB!=null)
+        {
+            countB++;
+            cB=cB.next;
+        }
+
+        if(countA == 0 || countB == 0)
+            return null;
+        else if (countA>countB)
+        {
+            while(diff>countA-countB)
+            {
+                headA=headA.next;
+                diff++;
+            }
+        }
+        else if (countB>countA)
+        {
+            while(diff>countB-countA)
+            {
+                headB=headB.next;
+                diff++;
+            }
+        }
+        while(headA!=null)
+        {
+            if(headA==headB)
+                return headA;
+            else
+            {
+                headA=headA.next;
+                headB=headB.next;
+            }
+        }
+        return null;
+    }
+
 }
