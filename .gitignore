@@ -1,6 +1,8 @@
-/.idea/
+.idea
+workspace.xml
 *.bak
 *.iml
 ../out/
 out/
 *.class
+.DS_Store

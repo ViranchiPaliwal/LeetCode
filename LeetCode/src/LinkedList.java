@@ -1,11 +1,10 @@
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
 import java.util.Stack;
 
 /**
  * Created by viran on 06-07-2017.
  */
-public class LinkedList {
+class LinkedList {
 
     public ListNode partition(ListNode head, int x) {
         if(head==null)
