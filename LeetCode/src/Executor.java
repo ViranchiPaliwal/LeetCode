@@ -6,7 +6,7 @@ public class Executor {
 //--------------TREE------------------//
 Tree obj = new Tree();
 int[] arr = {3,2,1,6,0,5};
-obj.constructMaximumBinaryTree(arr);
+// obj.constructMaximumBinaryTree(arr);
 //        TreeNode a = new TreeNode(2);
 //        TreeNode b = new TreeNode(2);
 //        TreeNode c = new TreeNode(4);
